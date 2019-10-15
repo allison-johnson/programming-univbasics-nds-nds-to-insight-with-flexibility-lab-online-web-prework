@@ -50,7 +50,7 @@ def movies_with_director_key(name, movies_collection)
   # movie_with_director_name method
   collection_with_dir = []
   movies_collection.each do |movie|
-    collection_with_dir << movie_with_director_name(movie, name)
+    collection_with_dir << movie_with_director_name(name, movie)
   end #each
   collection_with_dir
 end
