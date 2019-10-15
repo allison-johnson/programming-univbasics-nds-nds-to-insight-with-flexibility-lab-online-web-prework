@@ -81,8 +81,13 @@ def movies_with_directors_set(source)
   #
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
-  movies_array_with_dir = []
-end
+  new_arr = []
+  source.each do |movies_info|
+    movies_info_with_director = movies_with_director_key(movies_info[:name], movies_info[:movies])
+    new_arr << movies_info_with_director
+  end #each
+  new_arr
+end #method
 
 # ----------------    End of Your Code Region --------------------
 # Don't edit the following code! Make the methods above work with this method
